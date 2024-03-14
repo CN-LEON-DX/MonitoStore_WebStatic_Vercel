@@ -443,6 +443,21 @@ a {
             margin-right: 14px;
         }
     }
+    @media (max-width: 379.89px) {
+        &__thumb--1{
+            zoom: 0.4;
+            position: absolute; 
+            left: 50px;
+            top: 80.4%;
+        }
+        &__thumb--2 {
+            zoom: 0.4;
+            position: absolute;
+            left: 68px;
+            top: 77.4%;
+
+        }
+    }
 }
 // END SECTION1
 
@@ -817,6 +832,17 @@ a {
             align-items: center;
         }
     }
+    @media (max-width: 410.89px) {
+        &__buttons a:nth-child(2){
+            border: 1px solid white ;
+        }
+    }
+    @media (max-width: 347.89px) {
+        &__buttons a:nth-child(1){
+            border: 1px solid white ;
+            color: white;
+        }
+    }
     // END RESPONSIVE SEC 3
 }
 // END SECTION 3
@@ -1008,7 +1034,7 @@ a {
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
-            a{
+            a {
                 margin-left: 32px;
                 color: $color-text-light;
             }
