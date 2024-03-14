@@ -680,6 +680,9 @@ a {
   position: relative;
   z-index: 999;
 }
+.section-3__buttons .button-margin {
+  margin-left: 12px;
+}
 @media (max-width: 1199.98px) {
   .section-3__bg-right {
     zoom: 1.2;
@@ -1084,7 +1087,11 @@ a {
     font-size: 13px;
   }
   .footer__socials ul {
+    display: flex;
     margin-top: 0;
+  }
+  .footer__socials ul li {
+    margin: 10px;
   }
   .footer__socials a {
     font-size: 20px;

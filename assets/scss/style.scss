@@ -710,6 +710,11 @@ a {
         position: relative;
         z-index: 999;
     }
+    &__buttons{
+        .button-margin{
+            margin-left: 12px;
+        }
+    }
 
     // RESPONSIVE SEC 3
     @media (max-width: 1199.98px) {
@@ -1154,7 +1159,11 @@ a {
     
         &__socials {
             ul {
+                display: flex;
                 margin-top: 0;
+                li {
+                    margin: 10px;
+                }
             }
             a {
                 font-size: 20px;
