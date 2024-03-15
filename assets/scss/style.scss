@@ -152,6 +152,7 @@ a {
 // SECTION 1
 .section-1 {
     margin-top: -120px;
+    margin-bottom: 60px;
     border-radius: 0px 0px 40px 40px;
     background: linear-gradient(103deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%); 
     &__bg-1{
@@ -462,9 +463,6 @@ a {
 // END SECTION1
 
 // SECTION 2
-.section-2{
-    margin-top: 60px;
-}
 .box-head{
     display: flex;
     flex-wrap: wrap;
@@ -490,6 +488,7 @@ a {
     }
 }
 .section-2 {
+    display: flex;
   &__wrap{
     display: flex;
     flex-wrap: wrap;
@@ -632,7 +631,6 @@ a {
 
 // SECTION 3
 .section-3{
-    margin-top: 40px;
     margin-bottom: 60px;
     &__wrap{
         display: flex;
@@ -1045,7 +1043,6 @@ a {
             }
         }
     }
-
     // RESPONSIVE FOR FOOTER
     @media (max-width: 991.98px) {
         &__top {
@@ -1174,3 +1171,165 @@ a {
     // END RESPONSIVE FOR FOOTER
 }
 // END FOOTER 
+
+
+// BREADCRUMB
+.breadcrumb {
+    margin-top: 47px;
+    &__list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        margin-bottom: 10px;
+        margin-right: 32px;
+        position: relative;
+        &::after {
+            content: "\f105";
+            font-weight: 900;
+            font-family: "Font Awesome 6 Free";
+            position: absolute;
+            left: calc(100% + 14px);
+            top: 4px;
+            font-size: 13px;
+            color: $color-text-light;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        color: $color-text-light;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+// END BREADCRUMB
+
+// Layout product
+.layout-product {
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__left {
+        display: block;
+        width: 20%;
+    }
+    &__right {
+        width: 80%;
+        .box-head {
+            margin-bottom: 0;
+        }
+    }
+    &__right {
+        .section-2__infor {
+            display: flex; 
+        }
+        .section-2__infor-item p{
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+        .section-2__infor-item {
+            font-size: 12px;
+            i {
+                display: none;
+            }
+        }
+        .section-2__price {
+            margin-top: 8px;
+            position: relative;
+            left: 0;
+            bottom: 0;
+        }
+        .box-head__right {
+            display: none;
+        }
+    }
+    @media (max-width: 767.98px) {
+        &__left {
+            display: none;
+        }
+        &__right {
+            width: 100%;
+        }
+        .box-head__right {
+            display: flex;
+            align-items: center;
+            span {
+                font-weight: 700;
+                font-size: 16px;
+                color: $color-primary;
+            }
+        }
+    }
+}
+// Filters
+.filters {
+    &__title {
+        display: flex;
+        margin-bottom: 12px;
+        img {
+            font-size: 30px;
+            margin-right: 8px;
+        }
+        span {
+            color: $color-primary;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    &__list {
+        display: block;
+    }
+    &__item-title {
+        font-weight: 700;
+        color: #00171F;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    &__item-choose {
+        margin-bottom: 8px;
+        lable {
+            font-size: 14px;
+        }
+    }
+    &__item-box{
+        padding-bottom: 8px;
+    }
+    &__item {
+        border-bottom: 1px solid #EBEEEF;
+    }
+}
+// End Filters
+
+// Pagination 
+.pagination {
+    &__list {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-item:nth-child(2){ 
+        background-color: $color-primary;
+        border-radius: 8px;
+        a {
+            color: white;
+        }
+    }
+    &-item {
+        padding: 0 10px;
+        a {
+            text-align: center;
+            color: $color-primary;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
