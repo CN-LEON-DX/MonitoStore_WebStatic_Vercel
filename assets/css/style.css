@@ -1330,6 +1330,16 @@ a {
 .product-infor__table td:last-child {
   text-align: right;
 }
+@media (max-width: 991.98px) {
+  .product-infor__buttons a:first-child {
+    width: 220px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .product-infor__buttons a:last-child {
+    font-size: 16px;
+  }
+}
 @media (max-width: 767.98px) {
   .product-infor__wrap {
     display: flex;
