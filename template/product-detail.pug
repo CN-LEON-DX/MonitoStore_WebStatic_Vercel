@@ -54,14 +54,112 @@ block main
                                 tr
                                     td Mô tả ngắn
                                     td Giống thuần chủng Shih Tzu. Cấu trúc cơ thể tốt. Với chứng chỉ MKA và Microchip. Cha từ dòng dõi vô địch.
-    .customer__ex
+    .customer
         .container
-            .customer__ex-wrap
-                h2.customer__ex--title Khách hàng của chúng tôi
-                .customer__ex--images
+            .customer__wrap
+                h2.customer--title Khách hàng của chúng tôi
+                .customer--images
                     img(src="assets/image/product-detail-customer-1.png", alt="")
                     img(src="assets/image/product-detail-customer-2.png", alt="")
                     img(src="assets/image/product-detail-customer-3.png", alt="")
                     img(src="assets/image/product-detail-customer-4.png", alt="")
                     img(src="assets/image/product-detail-customer-5.png", alt="")
+                ul.customer--slides
+                  li.slides-active   
+                  li.slides-normal  
+                  li.slides-normal  
+                  li.slides-normal  
+                  li.slides-normal  
+                  li.slides-normal  
+                  
+                
+    //- SECTION 2
+    .section-2
+        .container
+            .box-head
+                .box-head__left
+                    .box-head__sub-title Có gì mới
+                    .box-head__title Một số vật nuôi của chúng tôi
+                .box-head__right
+                    a(href="#" class="button") Xem thêm <i class="fa-solid fa-angle-right"></i>
+            //- Declare variable for multiple items
+            -
+                var pets = [
+                    {
+                        image: 'assets/image/image 1.jpg',
+                        title: 'MO231 - Pomeranian Trắng',
+                        gender: 'Đực',
+                        age: '02 tháng',
+                        price: '6.900.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 2.jpg',
+                        title: 'MO502 - Poodle Tiny Vàng',
+                        gender: 'Cái',
+                        age: '02 tháng',
+                        price: '3.900.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 3.jpg',
+                        title: 'MO102 - Poodle Tiny Sepia',
+                        gender: 'Đực',
+                        age: '02 tháng',
+                        price: '4.000.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 4.jpg',
+                        title: 'MO512 - Alaskan Malamute',
+                        gender: 'Đực',
+                        age: '03 tháng',
+                        price: '8.900.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 5.jpg',
+                        title: 'MO231 - Pembroke Corgi',
+                        gender: 'Đực',
+                        age: '02 tháng',
+                        price: '7.900.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 6.jpg',
+                        title: 'MO502 - Pembroke Corgi',
+                        gender: 'Cái',
+                        age: '02 tháng',
+                        price: '9.000.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 7.jpg',
+                        title: 'MO231 - Pomeranian Trắng',
+                        gender: 'Cái',
+                        age: '02 tháng',
+                        price: '6.500.000 VND'
+                    },
+                    {
+                        image: 'assets/image/image 8.jpg',
+                        title: 'MO512 - Poodle Tiny',
+                        gender: 'Đực',
+                        age: '02 tháng',
+                        price: '5.000.000 VND'
+                    }
+                ];
+            .section-2__wrap
+                each pet in pets
+                    .section-2__item
+                        .section-2__image
+                            a(href="product-list.html")
+                                img(src=pet.image alt=pet.title)
+                        .section-2__content
+                            h3.section-2__title
+                                a(href="product-list.html")  #{pet.title}
+                            .section-2__infor
+                                .section-2__infor-item 
+                                    p Giống: 
+                                    p #{pet.gender}
+                                <i class="fa-solid fa-circle"></i>
+                                .section-2__infor-item
+                                    p Tuổi: 
+                                    p #{pet.age}
+                            .section-2__price #{pet.price}
+            .section-2__button-bottom
+              a(href="#" class="button") Xem thêm <i class="fa-solid fa-angle-right"></i>
             

@@ -1426,11 +1426,37 @@ a {
             }
         }
     }
+    @media (max-width: 767.98px){
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+            margin-left: 0;
+            .breadcrumb {
+                margin-top: 34px;
+                &__list {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        &__buttons {
+            flex-wrap: nowrap;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
 }
 // Image customer
-.customer_ex {
-    &-wrap{
-        margin-left: 16px;
+.customer {
+    &__wrap{
+        padding-left: 26px;
     }
     &--title {
         font-size: 24px;
@@ -1439,5 +1465,37 @@ a {
     }
     &--images {
         display: flex;
+        overflow: hidden;
+        img {
+            width: 248px;
+            margin-right: 12px;
+        }
     }
+    &--slides {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        list-style-type: none;
+        justify-content: center;
+        margin-top: 24px;
+        margin-bottom: 26px;
+        .slides-active {
+            width: 22.75px;
+            height: 9px;
+            background-color: $color-primary;
+            border-radius: 7.5px;
+            margin-right: 6px;
+
+        }
+        .slides-normal {
+            border-radius: 7.5px;
+            background-color: $color-text-light;
+            width: 9px;
+            height: 9px;
+            margin-right: 6px;
+        }
+    }
+    margin-bottom: 60px;
 }
